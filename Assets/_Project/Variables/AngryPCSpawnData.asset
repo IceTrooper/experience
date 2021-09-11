@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b140dc3903f0846b9382b463b378c7, type: 3}
+  m_Name: AngryPCSpawnData
+  m_EditorClassIdentifier: 
+  spawnWeight: 1
+  spawnDelay: {x: 5, y: 10}
+  enemyPrefab: {fileID: 3254515008097877948, guid: 55b39109adf79594bb4af274a27bd656, type: 3}
