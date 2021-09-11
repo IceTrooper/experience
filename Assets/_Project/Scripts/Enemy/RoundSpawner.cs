@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class RoundSpawner : MonoBehaviour
@@ -9,7 +8,9 @@ public class RoundSpawner : MonoBehaviour
 
     [SerializeField] private WeightedList<EnemySpawnData> enemiesSpawnData;
 
+    public float InnerRadius => innerRadius;
     [SerializeField] private float innerRadius = 1f;
+    public float OuterRadius => outerRadius;
     [SerializeField] private float outerRadius = 3f;
 
     private bool isStopped;
@@ -45,13 +46,5 @@ public class RoundSpawner : MonoBehaviour
         randomPosition *= (outerRadius - innerRadius);
         randomPosition += (innerRadius / randomPosition.magnitude) * randomPosition;
         return transform.position + new Vector3(randomPosition.x, 0f, randomPosition.y);
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.green;
-        Handles.DrawWireDisc(transform.position, transform.up, innerRadius);
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position, transform.up, outerRadius);
     }
 }
