@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoundSpawner : MonoBehaviour
 {
     [Tooltip("The smaller value, the faster spawn. RealDelay = Multiplier * EnemyDelay. This value can be used to add more difficulty to spawn ratio.")]
-    [SerializeField, Range(0f, 1f)] private float delayMultiplier = 1f;
+    [Range(0.01f, 1f)] public float delayMultiplier = 1f;
 
     [SerializeField] private WeightedList<EnemySpawnData> enemiesSpawnData;
 

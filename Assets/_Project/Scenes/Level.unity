@@ -9554,6 +9554,34 @@ MonoBehaviour:
   playerDiedEvent: {fileID: 11400000, guid: a0708510575bd924ab9cacf8194522ae, type: 2}
   gameOverEvent: {fileID: 11400000, guid: 8cb9781716d54b6438d3d1457d29835e, type: 2}
   gameOverObject: {fileID: 402443601}
+  increaseDifficulty: 1
+  spawner: {fileID: 1185732543}
+  difficultyChangeDuration: 180
+  minSpawnerRatio: 0.2
+  difficultyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &852142776
 Transform:
   m_ObjectHideFlags: 0

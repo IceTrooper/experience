@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AngryPCSpawnData
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3254515008097877948, guid: 55b39109adf79594bb4af274a27bd656, type: 3}
-  spawnDelay: {x: 4, y: 8}
+  spawnDelay: {x: 3, y: 6}
