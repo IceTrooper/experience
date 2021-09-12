@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652d8142967787649818f713eba5cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsTextPrefab: {fileID: 0}
+  pointsTextPrefab: {fileID: 4450348323474894689, guid: 4c4ba012b5dd78545b77a00856253aa5, type: 3}
   pointsScored: {fileID: 11400000, guid: f7c8922f7553b9c4f855dd417d038b7b, type: 2}
 --- !u!1 &3254515008153827779
 GameObject:
