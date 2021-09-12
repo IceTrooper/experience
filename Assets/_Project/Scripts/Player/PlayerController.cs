@@ -1,5 +1,6 @@
 using Atoms;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TransformList playerFortressList;
     [SerializeField] private AtomEvent playerDiedEvent;
 
+    [Header("Shooting")]
+    [SerializeField] private Image reloadFillingImage;
     [SerializeField] private float shootDelay = 0.2f;
     private float delay;
 
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
         if(delay > 0f)
         {
             delay -= Time.deltaTime;
+            reloadFillingImage.fillAmount = (shootDelay - delay) / shootDelay;
         }
     }
 
