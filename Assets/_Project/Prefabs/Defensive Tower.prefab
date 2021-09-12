@@ -1335,8 +1335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3ac6212619cc348855b893552c8941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 250
-  health: 250
+  maxHealth: 500
+  health: 500
   OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1355,3 +1355,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  healthChangedNormalized: {fileID: 0}
