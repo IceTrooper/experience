@@ -18,7 +18,7 @@ public class RoundSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        spawnCoroutine = StartCoroutine(ContinuousSpawn());
+        spawnCoroutine = StartCoroutine(DoContinuousSpawn());
     }
 
     private void OnDisable()
@@ -26,13 +26,13 @@ public class RoundSpawner : MonoBehaviour
         StopCoroutine(spawnCoroutine);
     }
 
-    public IEnumerator ContinuousSpawn()
+    public IEnumerator DoContinuousSpawn()
     {
         while(!isStopped)
         {
             var randomEnemyData = enemiesSpawnData.GetRandomItem();
             var randomPosition = GetRandomPositionInsideAnnulus();
-            var lookAtCenter = Quaternion.LookRotation(randomPosition - transform.position, transform.up);
+            var lookAtCenter = Quaternion.LookRotation(transform.position - randomPosition, transform.up);
             Instantiate(randomEnemyData.enemyPrefab, randomPosition, lookAtCenter, transform);
             yield return new WaitForSeconds(delayMultiplier * randomEnemyData.GetRandomDelay());
         }

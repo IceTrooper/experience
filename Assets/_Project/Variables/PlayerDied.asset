@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b140dc3903f0846b9382b463b378c7, type: 3}
-  m_Name: AngryPCSpawnData
+  m_Script: {fileID: 11500000, guid: 060cfafb067dbd949bbefe85a73a6f70, type: 3}
+  m_Name: PlayerDied
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3254515008097877948, guid: 55b39109adf79594bb4af274a27bd656, type: 3}
-  spawnDelay: {x: 4, y: 8}

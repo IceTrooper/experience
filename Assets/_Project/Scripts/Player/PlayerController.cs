@@ -1,9 +1,12 @@
+using Atoms;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Gun gun;
+    [SerializeField] private TransformList playerFortressList;
+    [SerializeField] private AtomEvent playerDiedEvent;
 
     [SerializeField] private float shootDelay = 0.2f;
     private float delay;
@@ -11,11 +14,13 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         inputReader.attackEvent += OnAttack;
+        playerFortressList.Items.Add(transform);
     }
 
     private void OnDisable()
     {
         inputReader.attackEvent -= OnAttack;
+        playerFortressList.Items.Remove(transform);
     }
 
     private void Update()
@@ -37,5 +42,10 @@ public class PlayerController : MonoBehaviour
 
         delay = shootDelay;
         gun.Fire();
+    }
+
+    public void Die()
+    {
+        playerDiedEvent.Raise();
     }
 }

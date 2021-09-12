@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8536270657798011446}
   - component: {fileID: 8536270657798011445}
   - component: {fileID: 8293896077284094544}
+  - component: {fileID: 9015835814439427499}
+  - component: {fileID: -3652599869849084240}
   m_Layer: 0
   m_Name: Defensive Tower
   m_TagString: Tower
@@ -1308,3 +1310,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.33082688, z: 1}
   m_Center: {x: 0, y: 0.16541344, z: 0}
+--- !u!114 &9015835814439427499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536270657798011451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847f1d8e9f292b94b90c509430ba8655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerFortressList: {fileID: 11400000, guid: e0de1a44ae31fcd49934aec044bc30bd, type: 2}
+--- !u!114 &-3652599869849084240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536270657798011451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3ac6212619cc348855b893552c8941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 250
+  health: 250
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8536270657798011451}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

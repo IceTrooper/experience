@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag(ProjectConstants.EnemyTag))
         {
             var damagable = collision.gameObject.GetComponent<Damagable>();
             damagable.TakeDamage(damageAmount);
