@@ -17,7 +17,7 @@ namespace Atoms
                 Items = value;
             }
         }
-        protected List<T> items;
+        protected List<T> items = new List<T>();
     }
 
 }
