@@ -142,5 +142,6 @@ public class EnemyBehavior : MonoBehaviour
     public void OnDie()
     {
         killedEvent.Raise();
+        Destroy(gameObject);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Extendable wrapper for input
 public class InputController : MonoBehaviour
@@ -39,6 +40,10 @@ public class InputController : MonoBehaviour
         if(useMouse)
         {
             UpdateMouseRotation();
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }    
         }
     }
 
