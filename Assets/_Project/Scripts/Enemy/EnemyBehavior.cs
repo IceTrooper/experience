@@ -13,6 +13,10 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] private LineRenderer hackingPipe;
     [SerializeField] private float damageAmount = 20;
     [SerializeField] private float damageDelay = 2;
+
+    [Header("Events")]
+    [SerializeField] private AtomEvent killedEvent;
+
     public bool CanHacking
     {
         get
@@ -133,5 +137,10 @@ public class EnemyBehavior : MonoBehaviour
 
         var newRotation = Quaternion.LookRotation(targetDirection, transform.up);
         rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, newRotation, rotationSpeed * Time.fixedDeltaTime));
+    }
+
+    public void OnDie()
+    {
+        killedEvent.Raise();
     }
 }

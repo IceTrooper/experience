@@ -1,3 +1,4 @@
+using Atoms;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,9 @@ public class Damagable : MonoBehaviour
     public UnityEvent<float> OnHit;
     public UnityEvent<float> OnDie;
 
+    [Header("AtomEvents (Optional)")]
+    [SerializeField] private FloatEvent healthChangedNormalized;
+
     public float TakeDamage(float damageAmount)
     {
         if(health <= 0f) return 0f;
@@ -25,10 +29,13 @@ public class Damagable : MonoBehaviour
             damageAmount += health;
             health = 0f;
             OnDie.Invoke(damageAmount);
-            return damageAmount;
+        }
+        else
+        {
+            OnHit.Invoke(damageAmount);
         }
 
-        OnHit.Invoke(damageAmount);
+        if(healthChangedNormalized != null) healthChangedNormalized.Raise(health / maxHealth);
         return damageAmount;
     }
 }

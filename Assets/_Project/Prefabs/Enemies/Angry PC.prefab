@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 6358349965568215673}
   - component: {fileID: 5592406830092227272}
   - component: {fileID: 2488578825826407088}
+  - component: {fileID: 4355898346144411846}
   m_Layer: 0
   m_Name: Angry PC
   m_TagString: Enemy
@@ -528,6 +529,7 @@ MonoBehaviour:
   hackingPipe: {fileID: 4649872703743287656}
   damageAmount: 20
   damageDelay: 2
+  killedEvent: {fileID: 11400000, guid: 2f9e7ef0b3c1b154b8f14ca7caa973ee, type: 2}
 --- !u!114 &2488578825826407088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +562,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4355898346144411846}
+        m_TargetAssemblyTypeName: Scoreable, Assembly-CSharp
+        m_MethodName: GetPoints
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5592406830092227272}
+        m_TargetAssemblyTypeName: EnemyBehavior, Assembly-CSharp
+        m_MethodName: OnDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  healthChangedNormalized: {fileID: 0}
+--- !u!114 &4355898346144411846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254515008097877948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652d8142967787649818f713eba5cec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsTextPrefab: {fileID: 0}
+  pointsScored: {fileID: 11400000, guid: f7c8922f7553b9c4f855dd417d038b7b, type: 2}
 --- !u!1 &3254515008153827779
 GameObject:
   m_ObjectHideFlags: 0

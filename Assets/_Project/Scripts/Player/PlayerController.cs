@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         gun.Fire();
     }
 
-    public void Die()
+    public void OnDie()
     {
         playerDiedEvent.Raise();
     }
