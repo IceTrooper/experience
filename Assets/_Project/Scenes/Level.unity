@@ -8609,6 +8609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange Defensive Tower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9015835814439427499, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
+      propertyPath: playerDamagable
+      value: 
+      objectReference: {fileID: 1227003555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
 --- !u!4 &356648711 stripped
@@ -15479,6 +15483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Violet Defensive Tower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9015835814439427499, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
+      propertyPath: playerDamagable
+      value: 
+      objectReference: {fileID: 1227003555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
 --- !u!4 &1399351480 stripped
@@ -19372,6 +19380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teal Defensive Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 9015835814439427499, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
+      propertyPath: playerDamagable
+      value: 
+      objectReference: {fileID: 1227003555}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdfadc2ab8b4b6442b58a14c9be1e261, type: 3}
 --- !u!4 &1541774617 stripped

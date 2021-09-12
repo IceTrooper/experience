@@ -1323,6 +1323,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFortressList: {fileID: 11400000, guid: e0de1a44ae31fcd49934aec044bc30bd, type: 2}
+  playerDamagable: {fileID: 0}
+  healAmount: 20
+  healDelay: 3
 --- !u!114 &-3652599869849084240
 MonoBehaviour:
   m_ObjectHideFlags: 0

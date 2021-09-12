@@ -38,4 +38,20 @@ public class Damagable : MonoBehaviour
         if(healthChangedNormalized != null) healthChangedNormalized.Raise(health / maxHealth);
         return damageAmount;
     }
+
+    public float Heal(float healAmount)
+    {
+        if(health >= maxHealth) return 0;
+
+        health += healAmount;
+
+        if(health >= maxHealth)
+        {
+            healAmount -= health - maxHealth;
+            health = maxHealth;
+        }
+
+        if(healthChangedNormalized != null) healthChangedNormalized.Raise(health / maxHealth);
+        return healAmount;
+    }
 }
