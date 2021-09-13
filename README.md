@@ -2,7 +2,7 @@
 Infinite One-button Rotational Shooting Game in Cardboard
 
 # Installation
-Unpack .zip and run .exe file
+Install .apk on the mobile device.
 
 # Mechanics
 The game is inspired by the movies from the Matrix series.
@@ -52,6 +52,7 @@ More shader/effect/particles:
 All classes are located in the Scripts folder:
 
 SO - ScriptableObject
+
 SMB - StateMachineBehavior
 
 ## Directories
