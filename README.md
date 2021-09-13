@@ -38,6 +38,8 @@ I wanted to add three types of opponents:
 - Small robot - faster, but dealing less damage with short delay
 - Worm - spawned on walls, big damage, more health, focused on player (not towers)
 
+More guns! and Power Up system. Towers would be generating power ups (infinite ammo, laser gun, etc.)
+
 More shader/effect/particles:
 - Bullet shader
 - TV hologram shader
