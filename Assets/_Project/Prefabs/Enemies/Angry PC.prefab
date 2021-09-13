@@ -530,6 +530,7 @@ MonoBehaviour:
   damageAmount: 20
   damageDelay: 2
   killedEvent: {fileID: 11400000, guid: 2f9e7ef0b3c1b154b8f14ca7caa973ee, type: 2}
+  dieParticles: {fileID: 1618439566928989642, guid: 5fa6b31ec83716f4b93e1cf7885b58e9, type: 3}
 --- !u!114 &2488578825826407088
 MonoBehaviour:
   m_ObjectHideFlags: 0

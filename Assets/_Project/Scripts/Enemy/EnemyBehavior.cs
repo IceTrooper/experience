@@ -17,6 +17,9 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Events")]
     [SerializeField] private AtomEvent killedEvent;
 
+    [Header("Particles")]
+    [SerializeField] private GameObject dieParticles;
+
     public bool CanHacking
     {
         get
@@ -142,6 +145,7 @@ public class EnemyBehavior : MonoBehaviour
     public void OnDie()
     {
         killedEvent.Raise();
+        Instantiate(dieParticles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
