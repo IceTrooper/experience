@@ -26,6 +26,10 @@ public class RoundSpawner : MonoBehaviour
         StopCoroutine(spawnCoroutine);
     }
 
+    /// <summary>
+    /// Making continuous spawn of enemies with a delay.
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator DoContinuousSpawn()
     {
         while(!isStopped)
@@ -40,6 +44,10 @@ public class RoundSpawner : MonoBehaviour
         yield return null;
     }
 
+    /// <summary>
+    /// Getting random position inside annulus (between R1 and R2 radiuses).
+    /// </summary>
+    /// <returns>Random position inside annulus.</returns>
     private Vector3 GetRandomPositionInsideAnnulus()
     {
         var randomPosition = Random.insideUnitCircle;

@@ -46,11 +46,18 @@ public class UI_DisplayInt : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handler for base event without parameters.
+    /// </summary>
     private void OnValueChanged()
     {
         OnValueChanged(1);
     }
 
+    /// <summary>
+    /// Handler for IntEvent.
+    /// </summary>
+    /// <param name="newValue">Received IntEvent value.</param>
     private void OnValueChanged(int newValue)
     {
         if(shouldIncrease)
@@ -74,6 +81,9 @@ public class UI_DisplayInt : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets text to currentValue.
+    /// </summary>
     private void SetText()
     {
         displayedText.text = currentValue.ToString();

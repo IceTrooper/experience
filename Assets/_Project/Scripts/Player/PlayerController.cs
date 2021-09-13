@@ -35,11 +35,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handler for Attack event.
+    /// </summary>
     public void OnAttack()
     {
         UseActiveGun();
     }
 
+    /// <summary>
+    /// Tries to shoot with the active gun.
+    /// </summary>
     private void UseActiveGun()
     {
         if(delay > 0f) return;
@@ -48,6 +54,9 @@ public class PlayerController : MonoBehaviour
         gun.Fire();
     }
 
+    /// <summary>
+    /// Handler for Die event.
+    /// </summary>
     public void OnDie()
     {
         playerDiedEvent.Raise();

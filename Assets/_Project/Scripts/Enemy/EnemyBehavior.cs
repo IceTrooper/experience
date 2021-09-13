@@ -39,10 +39,15 @@ public class EnemyBehavior : MonoBehaviour
 
     private Coroutine hackingCoroutine;
 
-
+    /// <summary>
+    /// Returns the current target for the enemy.
+    /// </summary>
     public Transform Target => target;
     private Transform target;
     private Damagable targetDamagable;
+    /// <summary>
+    /// Is current target nearby?
+    /// </summary>
     public bool IsTargetNearby => isTargetNearby;
     private bool isTargetNearby;
 
@@ -50,6 +55,9 @@ public class EnemyBehavior : MonoBehaviour
     private Rigidbody rb;
     private Animator animator;
 
+    /// <summary>
+    /// Hash for 'CanAttack' animation parameter.
+    /// </summary>
     // Animations
     public static int hashCanHack = Animator.StringToHash("CanHack");
 
@@ -92,6 +100,9 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called when there is the beginning of the hacking process.
+    /// </summary>
     public void PrepareToHack()
     {
         var pipeEndPosition = hackingPipe.transform.InverseTransformPoint(target.position);
@@ -101,6 +112,10 @@ public class EnemyBehavior : MonoBehaviour
         hackingCoroutine = StartCoroutine(DoHacking());
     }
 
+    /// <summary>
+    /// Coroutine indicating hacking process. Apply damage every time when delay pass.
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator DoHacking()
     {
         var delayWFS = new WaitForSeconds(damageDelay);
@@ -115,6 +130,9 @@ public class EnemyBehavior : MonoBehaviour
         yield return null;
     }
 
+    /// <summary>
+    /// Called to stop hacking when object has been already hacked.
+    /// </summary>
     public void StopHacking()
     {
         StopCoroutine(hackingCoroutine);
@@ -122,6 +140,9 @@ public class EnemyBehavior : MonoBehaviour
         targetDamagable = null;
     }
 
+    /// <summary>
+    /// Checks if there is any target to follow and takes closest.
+    /// </summary>
     private void CheckTarget()
     {
         var newTarget = playerFortressList.GetClosest(transform.position);
@@ -129,6 +150,9 @@ public class EnemyBehavior : MonoBehaviour
         target = newTarget;
     }
 
+    /// <summary>
+    /// Move and rotate object via physics.
+    /// </summary>
     private void MoveAndRotate()
     {
         var targetDirection = new Vector3(
@@ -142,6 +166,9 @@ public class EnemyBehavior : MonoBehaviour
         rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, newRotation, rotationSpeed * Time.fixedDeltaTime));
     }
 
+    /// <summary>
+    /// Handler for Die event.
+    /// </summary>
     public void OnDie()
     {
         killedEvent.Raise();

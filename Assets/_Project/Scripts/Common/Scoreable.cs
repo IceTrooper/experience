@@ -4,19 +4,38 @@ using UnityEngine;
 
 public class Scoreable : MonoBehaviour
 {
+    /// <summary>
+    /// Text prefab in world coordinates.
+    /// </summary>
     [SerializeField] private GameObject pointsTextPrefab;
+    /// <summary>
+    /// Event raised when points collected.
+    /// </summary>
     [SerializeField] private IntEvent pointsScored;
 
+    /// <summary>
+    /// Receive points.
+    /// </summary>
+    /// <param name="pointsAmount">Points amount</param>
     public void GetPoints(float pointsAmount)
     {
         GetPoints((int)pointsAmount);
     }
 
+    /// <summary>
+    /// Receive points.
+    /// </summary>
+    /// <param name="pointsAmount">Points amount</param>
     public void GetPoints(int pointsAmount)
     {
         GetPoints(pointsAmount, pointsTextPrefab);
     }
 
+    /// <summary>
+    /// Receive points
+    /// </summary>
+    /// <param name="pointsAmount">Points amount</param>
+    /// <param name="textPrefab">Prefab to Instantiate when points collected.</param>
     public void GetPoints(int pointsAmount, GameObject textPrefab)
     {
         if(pointsAmount == 0) return;

@@ -7,6 +7,9 @@ public class BasicGun : Gun
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Pooler pooler;
 
+    /// <summary>
+    /// Fire a bullet from the riflePoint with bulletSpeed.
+    /// </summary>
     public override void Fire()
     {
         GameObject bullet;
