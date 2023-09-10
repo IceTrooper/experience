@@ -1,6 +1,8 @@
 # experience-recruitment
 Infinite One-button Rotational Shooting Game in Cardboard
 
+https://github.com/IceTrooper/experience/assets/51023959/56898286-1c86-4925-9bb9-5f86e8d102d1
+
 # Installation
 Install .apk on the mobile device.
 
